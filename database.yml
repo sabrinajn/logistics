@@ -1,0 +1,10 @@
+development:
+  db_name: 'logistics'
+  db_host: 'localhost'
+  db_username: 'root'
+  db_password: ''
+test:
+  db_name: 'logistics_test'
+  db_host: 'localhost'
+  db_username: 'root'
+  db_password: ''
