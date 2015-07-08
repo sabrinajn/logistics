@@ -1,10 +1,14 @@
 development:
-  db_name: 'logistics'
-  db_host: 'localhost'
-  db_username: 'root'
-  db_password: ''
+  adapter: mysql2
+  encoding: utf8
+  host: localhost
+  database: logistics
+  username: root
+  password:
 test:
-  db_name: 'logistics_test'
-  db_host: 'localhost'
-  db_username: 'root'
-  db_password: ''
+  adapter: mysql2
+  encoding: utf8
+  host: localhost
+  database: logistics_test
+  username: root
+  password:

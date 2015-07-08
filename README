@@ -1,16 +1,34 @@
 Motivação:
- Escolhi a linguagem Ruby, pois no momento é a que eu tenho maior familiaridade.
- Como a proposta era desenvolver um webservice simples e que precisaria ter uma boa perfomance, escolhi o framework Sinatra.
- Além de ter uma boa perfomance nesses casos, onde preciso expor dois endpoints.
- Ele é mais simples de desenvolver, configurar e não tem muitas dependências e modulos,
+ Como a proposta era desenvolver um webservice simples e que precisaria ter uma boa perfomance,
+ escolhi o framework Sinatra. Além de ter uma boa perfomance nesses casos, onde preciso expor dois endpoints,
+ ele é mais simples de desenvolver, configurar e não tem muitas dependências e modulos,
  comparado com o Rails. Nesse caso só precisei adicionar o modulo ActiveRecord, para a camada de persistência dos dados.
  Utilizei o rspec para escrever os testes unitários, pela facilidade de desenvolvento dos testes e na criação dos mocks.
- Escrevi apenas os testes dos metodos que eu considerei criticos para a aplicação, como o caso do calculo da rota e alguns
- casos onde eu não consigo simular no teste de aceitação, como trechos de código que geram Exceptions.
  O cucumber eu utilizei para os testes de aceitação.
+
+Instalação da aplicação:
+  Requisitos:
+    - mysql
+    - ruby
+
+  Passos:
+    1 - Configurar o mysql no arquivo database.yml
+
+    2 - Executar as seguintes rake tasks:
+        rake db:create
+        rake db:migrate_up
+
+    3 - Executando a aplicação:
+        rackup -p 9292 config.ru
+
+  Exemplos:
+   - cadastro de mapas:
+      curl -H 'Content-Type: multipart/form-data' -F "name=Mapa RJ" -F "file=@routes.txt;type=text/plain" -X POST http://localhost:9292/maps -v
+
+   - buscar melhor rota:
+     curl -X GET "http://localhost:9292/search?name=Mapa%20RJ&source=A&target=E&autonomy=10&price=2.5" -v
 
 Documentação:
   Consulte o diretório doc para encontrar mais informações sobre as APIs, como os parâmetros de entrada, respostas,
   e exemplos de requisições.
-
 
