@@ -1,0 +1,16 @@
+Motivação:
+ Escolhi a linguagem Ruby, pois no momento é a que eu tenho maior familiaridade.
+ Como a proposta era desenvolver um webservice simples e que precisaria ter uma boa perfomance, escolhi o framework Sinatra.
+ Além de ter uma boa perfomance nesses casos, onde preciso expor dois endpoints.
+ Ele é mais simples de desenvolver, configurar e não tem muitas dependências e modulos,
+ comparado com o Rails. Nesse caso só precisei adicionar o modulo ActiveRecord, para a camada de persistência dos dados.
+ Utilizei o rspec para escrever os testes unitários, pela facilidade de desenvolvento dos testes e na criação dos mocks.
+ Escrevi apenas os testes dos metodos que eu considerei criticos para a aplicação, como o caso do calculo da rota e alguns
+ casos onde eu não consigo simular no teste de aceitação, como trechos de código que geram Exceptions.
+ O cucumber eu utilizei para os testes de aceitação.
+
+Documentação:
+  Consulte o diretório doc para encontrar mais informações sobre as APIs, como os parâmetros de entrada, respostas,
+  e exemplos de requisições.
+
+
